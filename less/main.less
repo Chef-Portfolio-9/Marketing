@@ -1,0 +1,23 @@
+@import "__mixins";
+@import "__variables";
+@import "_header";
+@import "_jumbotron";
+@import "_recipes";
+@import "_contact";
+@import "_footer";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.mobile {
+  .desktop({
+    display: none !important;
+  });
+}
+.desktop {
+  .mobile({
+    display: none !important;
+  });
+}
