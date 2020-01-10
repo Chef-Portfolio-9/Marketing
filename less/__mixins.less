@@ -1,0 +1,68 @@
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.abs-wrap() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.flex-direction(@var) {
+  flex-direction: @var;
+  -ms-flex-direction: @var;
+  -webkit-flex-direction: @var;
+}
+.box-shadow(@var) {
+  box-shadow: @var;
+  -moz-box-shadow: @var;
+  -o-box-shadow: @var;
+  -webkit-box-shadow: @var;
+}
+.transform(@var) {
+  transform: @var;
+  -moz-transform: @var;
+  -ms-transform: @var;
+  -o-transform: @var;
+  -webkit-transform: @var;
+}
+.border-radius(@var) {
+  border-radius: @var;
+  -moz-border-radius: @var;
+  -webkit-border-radius: @var;
+}
+.object-fit(@var) {
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+.filter(@var) {
+  filter: @var;
+  -ms-filter: @var;
+  -webkit-filter: @var;
+}
+.box-sizing(@var) {
+  box-sizing: @var;
+  -moz-box-sizing: @var;
+  -webkit-box-sizing: @var;
+}
+.transition(@var) {
+  transition: @var;
+  -moz-transition: @var;
+  -o-transition: @var;
+  -webkit-transition: @var;
+}
+
+.mobile(@rules) {
+  @media all and (max-width: @mobile-breakpoint) {
+    @rules();
+  }
+}
+.desktop(@rules) {
+  @media all and (min-width: (@mobile-breakpoint + 1)) {
+    @rules();
+  }
+}
